@@ -38,3 +38,10 @@ rejected, even though it is technically an `int` subclass, because spelling
 The other edge is the teens themselves: numbers 11 through 19 are spelled with
 their own words (`eleven`, `twelve`, `thirteen`, ... `nineteen`) and are never
 decomposed. This is the whole reason the library exists.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
