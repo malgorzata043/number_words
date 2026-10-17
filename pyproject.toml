@@ -1,6 +1,6 @@
 [project]
 name = "number-words"
-version = "0.1.0"
+version = "0.1.1"
 description = "Render integers as English words, including the awkward teens."
 requires-python = ">=3.10"
 dependencies = []
